@@ -1,5 +1,6 @@
 package com.example.example_mod;
 
+import com.example.example_mod.items.ModItems;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
 import org.slf4j.Logger;
@@ -12,5 +13,6 @@ public class DakotasTests implements ModInitializer {
 	@Override
 	public void onInitialize(ModContainer mod) {
 		LOGGER.info("Hello Quilt world from {}!", mod.metadata().name());
+		ModItems.RegisterModItems();
 	}
 }
