@@ -8,10 +8,10 @@
     ],
     "key": {
         "s": {
-          "item": "minecraft:nether_star"
+          "item": "minecraft:phantom_membrane"
         },
         "N": {
-            "item": "minecraft:netherite_block"
+            "item": "minecraft:iron_ingot"
         },
         "S": {
             "item": "minecraft:stick"

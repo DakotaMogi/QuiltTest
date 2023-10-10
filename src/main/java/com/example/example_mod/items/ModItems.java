@@ -13,7 +13,7 @@ import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
 
 public class ModItems {
 
-	public static Item hammerItem = RegisterItem("hammer", new HammerItem(ToolMaterials.NETHERITE, 8, -3.1f, new QuiltItemSettings().maxCount(1)));
+	public static Item hammerItem = RegisterItem("hammer", new HammerItem(ToolMaterials.IRON, 5, -3.1f, new QuiltItemSettings().maxCount(1)));
 
 
 	private static Item RegisterItem(String name, Item item){
