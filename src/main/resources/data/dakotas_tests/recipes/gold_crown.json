@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "equipment",
+  "pattern": [
+    " g ",
+    "g g"
+  ],
+  "key": {
+    "g": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "result": {
+    "item": "dakotas_tests:gold_crown",
+    "count": 1
+  }
+}

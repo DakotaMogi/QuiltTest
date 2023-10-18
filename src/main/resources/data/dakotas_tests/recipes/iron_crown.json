@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "equipment",
+  "pattern": [
+    " i ",
+    "i i"
+  ],
+  "key": {
+    "i": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "dakotas_tests:iron_crown",
+    "count": 1
+  }
+}

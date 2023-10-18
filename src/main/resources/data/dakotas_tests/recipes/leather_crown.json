@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "equipment",
+  "pattern": [
+    " l ",
+    "l l"
+  ],
+  "key": {
+    "l": {
+      "item": "minecraft:leather"
+    }
+  },
+  "result": {
+    "item": "dakotas_tests:leather_crown",
+    "count": 1
+  }
+}

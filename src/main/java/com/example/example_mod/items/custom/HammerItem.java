@@ -8,7 +8,6 @@ import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.decoration.ArmorStandEntity;
-import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
@@ -28,9 +27,8 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 public class HammerItem extends ToolItem{
-	private float attackDamage;
 	private final float basicAttackDamage;
-	private float basicAttackSpeed;
+	private final float basicAttackSpeed;
 	private Multimap<EntityAttribute, EntityAttributeModifier> attributeModifiers;
 
 	public HammerItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Item.Settings settings) {
@@ -50,19 +48,18 @@ public class HammerItem extends ToolItem{
 		ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
 		builder.put(
 			EntityAttributes.GENERIC_ATTACK_DAMAGE,
-			new EntityAttributeModifier(ATTACK_DAMAGE_MODIFIER_ID, "Weapon modifier", (double)damage, EntityAttributeModifier.Operation.ADDITION)
+			new EntityAttributeModifier(ATTACK_DAMAGE_MODIFIER_ID, "Weapon modifier", damage, EntityAttributeModifier.Operation.ADDITION)
 		);
 		builder.put(
 			EntityAttributes.GENERIC_ATTACK_SPEED,
-			new EntityAttributeModifier(ATTACK_SPEED_MODIFIER_ID, "Weapon modifier", (double)speed, EntityAttributeModifier.Operation.ADDITION)
+			new EntityAttributeModifier(ATTACK_SPEED_MODIFIER_ID, "Weapon modifier", speed, EntityAttributeModifier.Operation.ADDITION)
 		);
 		this.attributeModifiers = builder.build();
 	}
 
 	@Override
 	public void onStoppedUsing(ItemStack stack, World world, LivingEntity user, int remainingUseTicks) {
-		if (user instanceof PlayerEntity) {
-			PlayerEntity playerEntity = (PlayerEntity) user;
+		if (user instanceof PlayerEntity playerEntity) {
 			int i = this.getMaxUseTime(stack) - remainingUseTicks;
 			float f = getPullProgress(i);
 
@@ -103,6 +100,17 @@ public class HammerItem extends ToolItem{
 						playerEntity.getY(),
 						playerEntity.getZ(),
 						SoundEvents.BLOCK_ANCIENT_DEBRIS_BREAK,
+						SoundCategory.PLAYERS,
+						1.5F,
+						1.0F / (world.getRandom().nextFloat() * 0.4F + 1.2F) + 1 * 0.5F
+					);
+				}else{
+					world.playSound(
+						null,
+						playerEntity.getX(),
+						playerEntity.getY(),
+						playerEntity.getZ(),
+						SoundEvents.BLOCK_ANVIL_BREAK,
 						SoundCategory.PLAYERS,
 						1.5F,
 						1.0F / (world.getRandom().nextFloat() * 0.4F + 1.2F) + 1 * 0.5F

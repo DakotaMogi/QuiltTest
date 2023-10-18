@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "equipment",
+  "pattern": [
+    "hdh",
+    "d d"
+  ],
+  "key": {
+    "d": {
+      "item": "minecraft:diamond"
+    },
+    "h": {
+      "item": "minecraft:goat_horn"
+    }
+  },
+  "result": {
+    "item": "dakotas_tests:diamond_horned_crown",
+    "count": 1
+  }
+}

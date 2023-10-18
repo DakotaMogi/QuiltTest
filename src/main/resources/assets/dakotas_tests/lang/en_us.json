@@ -1,3 +1,13 @@
 {
-  "item.dakotas_tests.hammer": "Hammer"
+  "item.dakotas_tests.hammer": "Hammer",
+  "item.dakotas_tests.leather_crown": "Leather Crown",
+  "item.dakotas_tests.iron_crown": "Iron Crown",
+  "item.dakotas_tests.gold_crown": "Gold Crown",
+  "item.dakotas_tests.diamond_crown": "Diamond Crown",
+  "item.dakotas_tests.netherite_crown": "Netherite Crown",
+  "item.dakotas_tests.leather_horned_crown": "Leather Horned Crown",
+  "item.dakotas_tests.iron_horned_crown": "Iron Horned Crown",
+  "item.dakotas_tests.gold_horned_crown": "Gold Horned Crown",
+  "item.dakotas_tests.diamond_horned_crown": "Diamond Horned Crown",
+  "item.dakotas_tests.netherite_horned_crown": "Netherite Horned Crown"
 }

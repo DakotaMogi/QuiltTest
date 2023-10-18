@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "equipment",
+  "pattern": [
+    "hch"
+  ],
+  "key": {
+    "c": {
+      "item": "dakotas_tests:netherite_crown"
+    },
+    "h": {
+      "item": "minecraft:goat_horn"
+    }
+  },
+  "result": {
+    "item": "dakotas_tests:netherite_horned_crown",
+    "count": 1
+  }
+}

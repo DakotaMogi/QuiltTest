@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "equipment",
+  "pattern": [
+    " d ",
+    "d d"
+  ],
+  "key": {
+    "d": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "item": "dakotas_tests:diamond_crown",
+    "count": 1
+  }
+}
